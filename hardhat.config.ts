@@ -19,6 +19,11 @@ const config: HardhatUserConfig = {
       accounts: process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
       deploy: ["deploy/mastercopy-proxy"], // deploy via mastercopy and a proxy
     },
+    any: {
+      url: process.env.ANY_PROVIDER_URL || "",
+      accounts: process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
+      deploy: ["deploy/mastercopy-proxy"], // deploy via mastercopy and a proxy
+    }
   },
   namedAccounts: {
     deployer: 0,
